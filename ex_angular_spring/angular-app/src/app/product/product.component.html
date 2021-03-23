@@ -1,0 +1,12 @@
+<h3>Recherche de produit par numero (backend springBoot/H2)</h3>
+
+<label>numeroProduit:</label><input type="text" [(ngModel)]="numero" /> (ex: 10 ou 20)<br/>
+<button (click)="searchByNum()">search by num</button>
+<hr/>
+{{message}}
+<hr/>
+<div *ngIf="product">
+    <label>id (pk): &nbsp; </label> <b>{{product.id}}</b> <br/>
+    <label>numeroProduit: &nbsp;</label> <b>{{product.numeroProduit}}</b> <br/>
+    <label>libelle: &nbsp;</label> <b>{{product.libelle}}</b> <br/>
+</div>

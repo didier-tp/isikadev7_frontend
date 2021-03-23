@@ -1,0 +1,3 @@
+{ "/produit" : { "secure" : "false" ,
+    "target" : "http://localhost:9998" }
+}
