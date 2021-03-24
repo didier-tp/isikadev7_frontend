@@ -18,8 +18,10 @@ function cacherOuMontrerHistorique(){
 	var zoneCheckBox = document.querySelector("#cbHisto");
 	if(zoneCheckBox.checked){
 		zoneHistorique.style.display="block";
+		//zoneHistorique.style.visibility="visible";
 	}else{
 		zoneHistorique.style.display="none";
+		//zoneHistorique.style.visibility="hidden";
 	}
 }
 
