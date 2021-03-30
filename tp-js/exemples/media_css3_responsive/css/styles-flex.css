@@ -41,7 +41,7 @@ img { max-width:100%;} /* pour shrink sur images si trop grandes */
 @media screen and (max-width : 36em){
 .proportionalText {
 	/*font-size: 80%;*/
-	font-size: 100%;
+	font-size: 50%;
 	color:red;
 }
 }
@@ -62,14 +62,14 @@ img { max-width:100%;} /* pour shrink sur images si trop grandes */
 
 @media screen and (min-width:64em){
 .proportionalText {
-	font-size: 120%;
+	font-size: 140%;
 	color:blue;
 }
 }
 
 @media screen and (min-width : 80em){
 .proportionalText {
-	font-size: 130%;
+	font-size: 180%;
 	color:red;
 }
 }

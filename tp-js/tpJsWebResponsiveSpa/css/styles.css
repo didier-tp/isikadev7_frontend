@@ -1,7 +1,7 @@
 @import "common.css";
 .enEvidence {
   font-weight: bold;
-  color: green !important;
+  color: orange !important;
 }
 
 p {
@@ -114,7 +114,7 @@ img {
 
 .noirEtblanc {
   filter: grayscale(100%);
-  transition: 0.3s ease-in-out;
+  transition: 2.3s ease-in-out;
 }
 
 .noirEtblanc:hover {
@@ -123,7 +123,7 @@ img {
 
 .tournerSurSoiMeme:hover {
   transform: rotate(360deg);
-  transition: all 0.5s ease;
+  transition: all 2.5s ease;
 }
 
 @keyframes flash-anim {
@@ -144,7 +144,7 @@ img {
   }
 }
 .myflash:hover {
-  animation: flash-anim 3s;
+  animation: flash-anim 3s infinite;
 }
 
 @keyframes rotation-anim {
@@ -187,6 +187,5 @@ img {
   width: 200px;
   height: 200px;
 }
-
 
 /*# sourceMappingURL=styles.css.map */
