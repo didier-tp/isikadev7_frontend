@@ -1,5 +1,6 @@
-import { IPerson,Personne } from './personnes'
-import { Employe } from './employes'
+import { Employe } from "./employes";
+import { IPerson, Personne } from "./personnes";
+
 
 let p1 : Personne;
 p1 = new Personne();

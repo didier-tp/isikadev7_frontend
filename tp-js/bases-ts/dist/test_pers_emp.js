@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var personnes_1 = require("./personnes");
 var employes_1 = require("./employes");
+var personnes_1 = require("./personnes");
 var p1;
 p1 = new personnes_1.Personne();
 if (p1 instanceof employes_1.Employe) {
