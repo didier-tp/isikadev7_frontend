@@ -46,8 +46,12 @@ exports.deviseApiRouter.route('/devise-api/public/convert')
     //appeler via await  deviseService.findById(codeTarget); et recuperer
     //le resultat dans deviseTarget
     //**************************************
+    /*
     const deviseSrc = await deviseService.findById(codeSrc);
-    const deviseTarget = await deviseService.findById(codeTarget);
+    const deviseTarget = await deviseService.findById(codeTarget)
+    */
+    const [deviseSrc, deviseTarget] = await Promise.all([deviseService.findById(codeSrc),
+        deviseService.findById(codeTarget)]);
     return { source: codeSrc,
         target: codeTarget,
         amount: amount,
@@ -69,7 +73,7 @@ exports.deviseApiRouter.route('/devise-api/private/role-admin/devise')
     let updatedDevise = await deviseService.update(devise);
     return updatedDevise;
 }));
-// DELETE http://localhost:8282/devise-api/private/role_admin/devise/EUR
+// DELETE http://localhost:8282/devise-api/private/role-admin/devise/EUR
 exports.deviseApiRouter.route('/devise-api/private/role-admin/devise/:code')
     .delete(apiHandler_1.asyncToResp(async function (req, res, next) {
     let codeDevise = req.params.code;
