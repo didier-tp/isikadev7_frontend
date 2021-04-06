@@ -12,10 +12,10 @@ import { CalculatriceComponent } from './basic/calculatrice/calculatrice.compone
 import { TvaComponent } from './basic/tva/tva.component';
 import { XyComponent } from './basic/xy/xy.component';
 import { ZzComponent } from './basic/zz/zz.component';
-import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -28,8 +28,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     TvaComponent,
     XyComponent,
     ZzComponent,
-    LoginComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,10 @@ import { PreferencesService } from '../common/service/preferences.service';
 export class HeaderComponent implements OnInit {
 
   @Input()
-  public titre :string ="app";
+  public titre :string ="default-title";
+   //à afficher via {{titre}} dans header.component.html
+
+
 
  
   constructor(public preferencesService : PreferencesService) { }

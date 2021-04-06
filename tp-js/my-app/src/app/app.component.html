@@ -1,6 +1,11 @@
 <div class="container-fluid">
-    <app-header [titre]="title"></app-header>
-    <p> welcome to {{title}} </p>
+    <!---
+    <app-header ></app-header>
+    <app-header titre="titreEnDur" ></app-header>
+    <app-header [titre]="'titreEnDur2LeRetour'" ></app-header>
+    -->
+    <app-header [titre]="title" ></app-header> <!-- copie du .title du parent -->
+    <!-- <p> welcome to {{title}} </p> -->
     <router-outlet></router-outlet> <!-- selon route/url courante-->
     <app-footer></app-footer>
 </div>

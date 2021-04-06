@@ -4,6 +4,7 @@ import { BasicComponent } from './basic/basic.component';
 import { CalculatriceComponent } from './basic/calculatrice/calculatrice.component';
 import { TvaComponent } from './basic/tva/tva.component';
 import { LoginComponent } from './login/login.component';
+
 import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
