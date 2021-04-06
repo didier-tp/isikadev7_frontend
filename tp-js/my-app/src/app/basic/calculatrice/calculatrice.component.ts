@@ -7,9 +7,16 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./calculatrice.component.scss']
 })
 export class CalculatriceComponent implements OnInit {
-
+/*
   a! : number ;
   b! : number ;
+*/
+/*
+  a : number | null = null ;
+  b : number | null = null ;
+  */
+  a : number = <any> undefined ;
+  b : number = <any> undefined ;
   res! : number ;
 
   montrerHisto : boolean = true;
@@ -24,7 +31,8 @@ export class CalculatriceComponent implements OnInit {
         case "*" :
             this.res = Number(this.a) * Number(this.b);  break;
         default:
-            this.res = 0;
+           // this.res = 0;
+           this.res = <any> undefined;
        }
        this.historiqueCalculs.push(`${this.a} ${op} ${this.b} = ${this.res}`)
   }

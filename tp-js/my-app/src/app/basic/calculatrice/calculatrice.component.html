@@ -12,7 +12,7 @@
     <label>resultat:</label> 
     <span [style.font-weight]="res>0?'bold':'normal'"
           [class.negatif]="res<0" >
-        {{res}}</span> <br/>
+        {{res | number:'1.0-2' }}</span> <br/>
         
     <hr/>
 
