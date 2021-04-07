@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +17,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { LoginComponent } from './login/login.component';
 import { BsUtilModule } from 'src/bs-util/bs-util.module';
 import { ConversionComponent } from './conversion/conversion.component';
-
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -40,7 +39,8 @@ import { ConversionComponent } from './conversion/conversion.component';
     FormsModule,
     BrowserAnimationsModule,
     TabsModule.forRoot(),
-    BsUtilModule
+    BsUtilModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
