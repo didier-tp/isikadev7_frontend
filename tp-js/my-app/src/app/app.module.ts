@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { LoginComponent } from './login/login.component';
 import { BsUtilModule } from 'src/bs-util/bs-util.module';
+import { ConversionComponent } from './conversion/conversion.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { BsUtilModule } from 'src/bs-util/bs-util.module';
     XyComponent,
     ZzComponent,
     WelcomeComponent,
-    LoginComponent
+    LoginComponent,
+    ConversionComponent
   ],
   imports: [
     BrowserModule,

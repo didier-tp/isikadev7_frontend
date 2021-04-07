@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
    myMenuDef : MenuDefinition[] = [
     { label : "basic" , path : "/ngr-basic" } , 
     { label : "welcome" , path : "/ngr-welcome" },
+    { label : "conversion" , path : "/ngr-conversion" },
     { label : "autres" , 
       children : [
         { label : "login" , path : "/ngr-login" } ,
