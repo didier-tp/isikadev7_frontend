@@ -29,7 +29,25 @@ export class HeaderComponent implements OnInit {
     ];
 
  
-  constructor(public preferencesService : PreferencesService) { }
+    public couleurFondPrefereeLocale : string = "lightgrey";
+    public couleurTexte : string = "black";
+
+
+    constructor(private _preferencesService : PreferencesService) {
+      //synchronisation de la "copie locale" :
+      this._preferencesService.couleurFondPrefereeObservable
+      .subscribe(
+        //callback éventuellement re-déclenchée plusieurs fois :
+        (couleurFondPreferee)=>{
+            console.log("nouvelle couleurFondPreferee="+couleurFondPreferee)
+            if(couleurFondPreferee=="black"){
+              this.couleurTexte="white";
+            }else{
+              this.couleurTexte="black";
+            }
+            this.couleurFondPrefereeLocale=couleurFondPreferee;}
+      );
+     }
   
 
   ngOnInit(): void {
