@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   public onLogin(){
      //this.message = "donnees saisies = " + JSON.stringify(this.login);
-     this._loginService.postLogin(this.login).subscribe({
+     this._loginService.postLogin$(this.login).subscribe({
       next: (loginResp : LoginResponse)=>{ 
         console.log(loginResp);
         this.message = loginResp.message;  

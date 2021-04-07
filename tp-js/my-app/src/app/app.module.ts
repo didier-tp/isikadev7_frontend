@@ -17,7 +17,9 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { LoginComponent } from './login/login.component';
 import { BsUtilModule } from 'src/bs-util/bs-util.module';
 import { ConversionComponent } from './conversion/conversion.component';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
+import { MyAuthInterceptor } from './common/interceptor/my-auth.interceptor';
+import { AdminDeviseComponent } from './admin-devise/admin-devise.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { HttpClientModule} from '@angular/common/http'
     ZzComponent,
     WelcomeComponent,
     LoginComponent,
-    ConversionComponent
+    ConversionComponent,
+    AdminDeviseComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,13 @@ import { HttpClientModule} from '@angular/common/http'
     BsUtilModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MyAuthInterceptor,
+      multi: true
+      }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

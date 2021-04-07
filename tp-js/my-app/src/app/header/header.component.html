@@ -5,5 +5,5 @@
     <a routerLink='/ngr-basic'> basic</a> &nbsp;
     <a routerLink='/ngr-login'> login</a> &nbsp;
    -->
-<bsu-nav-bar [brandTitle]="titre" [menuDefs]="myMenuDef"></bsu-nav-bar>
+<bsu-nav-bar [brandTitle]="titre" [menuDefs]="myMenuDef" [currentUserRoles]="loginService.currentRole"></bsu-nav-bar>
 </p>

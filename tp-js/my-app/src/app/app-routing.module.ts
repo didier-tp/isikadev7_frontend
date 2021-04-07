@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminDeviseComponent } from './admin-devise/admin-devise.component';
 import { BasicComponent } from './basic/basic.component';
 import { CalculatriceComponent } from './basic/calculatrice/calculatrice.component';
 import { TvaComponent } from './basic/tva/tva.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/ngr-welcome', pathMatch: 'full'},
   { path: 'ngr-login', component: LoginComponent },
   { path: 'ngr-basic', component: BasicComponent },
-  { path: 'ngr-conversion', component: ConversionComponent }
+  { path: 'ngr-conversion', component: ConversionComponent },
+  { path: 'ngr-admin-devise', component: AdminDeviseComponent }
 ];
 
 @NgModule({

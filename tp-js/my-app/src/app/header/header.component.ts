@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MenuDefinition } from 'src/bs-util/data/MenuDefinition';
+import { LoginService } from '../common/service/login.service';
 import { PreferencesService } from '../common/service/preferences.service';
 
 @Component({
@@ -22,7 +23,7 @@ export class HeaderComponent implements OnInit {
         { label : "login" , path : "/ngr-login" } ,
         { label : "welcome" , path : "/ngr-welcome" },
         { divider : true },
-        { label : "menu-item3" , path : "path3" }
+        { label : "admin devise" , path : "/ngr-admin-devise" , role : "admin" }
       ]
     }
     
@@ -33,7 +34,8 @@ export class HeaderComponent implements OnInit {
     public couleurTexte : string = "black";
 
 
-    constructor(private _preferencesService : PreferencesService) {
+    constructor(private _preferencesService : PreferencesService,
+                public loginService : LoginService) {
       //synchronisation de la "copie locale" :
       this._preferencesService.couleurFondPrefereeObservable
       .subscribe(
