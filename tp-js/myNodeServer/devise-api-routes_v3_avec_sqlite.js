@@ -56,8 +56,8 @@ apiRouter.route('/devise-api/private/role-admin/devise')
 	var newValueOfDeviseToUpdate = req.body;
 	console.log("PUT,newValueOfDeviseToUpdate="+JSON.stringify(newValueOfDeviseToUpdate));
 	devise_dao_sqlite.update_devise (newValueOfDeviseToUpdate ,
-	function(err){
-			if(err){
+		function(err,nbChanges){
+			if(err || nbChanges ==0){
 				res.status(404).json({ err : "no devise to update with code=" + newValueOfDeviseToUpdate.code });
 			}else{
 					res.send(newValueOfDeviseToUpdate);
@@ -71,12 +71,12 @@ apiRouter.route('/devise-api/private/role-admin/devise/:code')
 	var codeDevise = req.params.code;
 	console.log("DELETE,codeDevise="+codeDevise);
 	devise_dao_sqlite.delete_devise_by_code( codeDevise ,
-									     function(err){
-											 if(err)
-											    res.status(404).send({ err : "not found , no delete" } );
-											 else
-										        res.send({ deletedDeviseCode : codeDevise } );
-									    });
+		function(err,nbChanges){
+            if(err || nbChanges ==0)
+					 res.status(404).send({ err : "not found , no delete" } );
+				 else
+					 res.send({ deletedDeviseCode : codeDevise } );
+			 });
 });
 
 exports.apiRouter = apiRouter;
