@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EnvService } from '../common/service/env.service';
 import { PreferencesService } from '../common/service/preferences.service'
 
 @Component({
@@ -14,7 +15,7 @@ export class FooterComponent implements OnInit {
      "lightgrey" , "lightgreen" , "lightpink" , "lightblue" , "black"] ;
 
 
-  constructor(private _preferencesService : PreferencesService) {
+  constructor(private _preferencesService : PreferencesService, private _envService : EnvService) {
         //synchronisation de la "copie locale" :
         this._preferencesService.couleurFondPrefereeObservable
             .subscribe(
@@ -22,6 +23,7 @@ export class FooterComponent implements OnInit {
               (couleurFondPreferee)=>{
                   this.couleurFondPrefereeLocale=couleurFondPreferee;}
             );
+        console.log("apiUrl=" + this._envService.apiUrl);
   }
 
   public onCouleurFondPrefereeLocaleChange(){

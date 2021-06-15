@@ -20,6 +20,7 @@ import { ConversionComponent } from './conversion/conversion.component';
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { MyAuthInterceptor } from './common/interceptor/my-auth.interceptor';
 import { AdminDeviseComponent } from './admin-devise/admin-devise.component';
+import { EnvServiceProvider } from './common/service/env.service.provider';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AdminDeviseComponent } from './admin-devise/admin-devise.component';
     HttpClientModule
   ],
   providers: [
+    EnvServiceProvider,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: MyAuthInterceptor,
