@@ -35,6 +35,15 @@ function makeAjaxPostRequest(url,jsonData,callback,errCallback) {
 	xhr.send(jsonData);
 }
 
+function makeAjaxPostMultipartRequest(url,formData,callback,errCallback) {
+	var xhr = new XMLHttpRequest();
+	registerCallbacks(xhr,callback,errCallback);
+	xhr.open("POST", url, true);
+	//xhr.setRequestHeader("Content-Type","multipart/form-data; boundary=....."); 
+	//par defaut le "Content-Type" est bien renseigné avec bon boundary
+	xhr.send(formData);
+}
+
 function makeAjaxPutRequest(url,jsonData,callback,errCallback) {
 	var xhr = new XMLHttpRequest();
 	registerCallbacks(xhr,callback,errCallback);
