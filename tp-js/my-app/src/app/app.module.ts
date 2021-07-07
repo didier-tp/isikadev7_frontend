@@ -21,6 +21,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { MyAuthInterceptor } from './common/interceptor/my-auth.interceptor';
 import { AdminDeviseComponent } from './admin-devise/admin-devise.component';
 import { EnvServiceProvider } from './common/service/env.service.provider';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { MapComponent } from './map/map.component'
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { EnvServiceProvider } from './common/service/env.service.provider';
     WelcomeComponent,
     LoginComponent,
     ConversionComponent,
-    AdminDeviseComponent
+    AdminDeviseComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { EnvServiceProvider } from './common/service/env.service.provider';
     BrowserAnimationsModule,
     TabsModule.forRoot(),
     BsUtilModule,
-    HttpClientModule
+    HttpClientModule,
+    GoogleMapsModule
   ],
   providers: [
     EnvServiceProvider,

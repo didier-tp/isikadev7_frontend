@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
     { label : "conversion" , path : "/ngr-conversion" },
     { label : "autres" , 
       children : [
+        { label : "map" , path : "/ngr-map" } ,
         { label : "login" , path : "/ngr-login" } ,
         { label : "welcome" , path : "/ngr-welcome" },
         { divider : true },
